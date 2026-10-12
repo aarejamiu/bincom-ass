@@ -1,0 +1,13 @@
+# Dependencies
+cv-app/node_modules/
+
+# Generated Cordova build artifacts
+cv-app/platforms/
+cv-app/plugins/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

@@ -13,15 +13,16 @@
   <main>
     <!-- PAGE 1: PROFILE + CAMERA -->
     <section class="page active" id="profile" aria-hidden="false">
-      <img id="photo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><rect width='120' height='120' fill='%23cfd8dc'/><text x='60' y='72' font-size='48' text-anchor='middle' fill='%2337474f'>?</text></svg>" alt="Profile photo">
+      <img id="photo" src="images/profile.jpg" alt="Profile photo">
       <div class="photo-actions">
-        <button id="btn-camera" type="button">📷 Take Profile Photo</button>
-        <button id="btn-gallery" type="button">🖼️ Choose from Gallery</button>
+        <button id="btn-camera" type="button">Take Profile Photo</button>
+        <button id="btn-gallery" type="button">Choose from Gallery</button>
       </div>
+      <input id="photo-input" type="file" accept="image/*" capture="environment" style="display:none">
       <h2>Aare Jamiu</h2>
-      <p class="sub">Mathematics Graduate · Developer</p>
-      <p>Motivated student with interests in software development, research and academic writing. Replace this text with your own summary.</p>
-      <p><a href="mailto:aarejamiu1@example.com">aarejamiu1@gmail.com</a> · <a href="tel:+2340000000000">+234 0907 859 9222</a></p>
+      <p class="sub">Mathematics Graduate · Software Developer</p>
+      <p>Detail-oriented graduate with a strong interest in software development, problem-solving, research, and academic writing.</p>
+      <p><a href="mailto:aarejamiu1@gmail.com">aarejamiu1@gmail.com</a> · <a href="tel:+23409078599222">+234 0907 859 9222</a></p>
     </section>
 
     <!-- PAGE 2: EDUCATION -->
@@ -33,25 +34,21 @@
 
     <!-- PAGE 3: SKILLS + EXPERIENCE -->
     <section class="page" id="skills" aria-hidden="true">
-      <h3>Skills</h3>
       <div id="skill-list"></div>
-      <h3>Projects</h3>
       <div id="project-list"></div>
     </section>
 
-    <!-- PAGE 4: CONTACT + GEOLOCATION -->
+    <!-- PAGE 4: CONTACT -->
     <section class="page" id="contact" aria-hidden="true">
-      <h3>Where I Am</h3>
-      <button id="btn-geo">📍 Get My Location</button>
-      <p id="geo-out">Location not fetched yet.</p>
-      <a id="map-link" href="#" style="display:none">Open in Maps</a>
-      <h3>Device Info</h3>
-      <p id="device-out">Waiting for device…</p>
-      <h3>Message Me</h3>
+      <p>Open to internships, freelance work, and collaboration opportunities.</p>
+      <p><strong>Email:</strong> <a href="mailto:aarejamiu1@gmail.com">aarejamiu1@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+23409078599222">+234 0907 859 9222</a></p>
+      <p><strong>Location:</strong> 46, Iwaya Road, Yaba, Lagos, Nigeria
+        <a href="https://www.google.com/maps?q=46+Iwaya+Road+Yaba+Lagos+Nigeria" target="_blank" rel="noopener">Open in Maps</a>
+      </p>
       <input id="msg-name" placeholder="Your name">
-      <textarea id="msg-body" placeholder="Message"></textarea>
+      <textarea id="msg-body" placeholder="Write your message here..."></textarea>
       <button id="btn-send">Send via Email</button>
-      <h3>Share This CV</h3>
       <button id="btn-share">Share CV</button>
     </section>
 
@@ -59,10 +56,10 @@
   </main>
 
   <nav aria-label="CV sections">
-    <button type="button" data-page="profile" class="active" aria-current="page">👤<span>Profile</span></button>
-    <button type="button" data-page="education">🎓<span>Education</span></button>
-    <button type="button" data-page="skills">🛠<span>Skills</span></button>
-    <button type="button" data-page="contact">✉️<span>Contact</span></button>
+    <button type="button" data-page="profile" class="active" aria-current="page"><span>Profile</span></button>
+    <button type="button" data-page="education"><span>Education</span></button>
+    <button type="button" data-page="skills"><span>Skills</span></button>
+    <button type="button" data-page="contact"><span>Contact</span></button>
   </nav>
 
   <script src="cordova.js"></script>

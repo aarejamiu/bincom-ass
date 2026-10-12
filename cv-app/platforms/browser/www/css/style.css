@@ -1,23 +1,104 @@
+:root {
+  --bg-page: #edf3f8;
+  --bg-panel: #dfeaf5;
+  --header-dark: #0f1f33;
+  --header-mid: #1a3a5f;
+  --primary: #1d4f82;
+  --primary-soft: #dfeaf7;
+  --primary-strong: #153b63;
+  --text-main: #1d2a39;
+  --text-muted: #5a6d82;
+  --card: #ffffff;
+  --card-border: #d8e1ec;
+  --input-bg: #f8fbff;
+  --input-border: #c9d7e8;
+  --shadow: rgba(15, 31, 51, 0.09);
+  --nav-bg: #f8fbfe;
+}
+
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-body{font-family:system-ui,Roboto,sans-serif;background:#f4f6f8;color:#222;height:100vh;display:flex;flex-direction:column}
-header{background:#1565c0;color:#fff;padding:calc(14px + env(safe-area-inset-top)) 16px 14px;text-align:center}
-main{flex:1;overflow-y:auto;padding:16px}
+
+body{
+  font-family:system-ui,Roboto,sans-serif;
+  background:linear-gradient(180deg, var(--bg-page) 0%, var(--bg-panel) 100%);
+  color:var(--text-main);
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+header{
+  background:linear-gradient(135deg, var(--header-dark) 0%, var(--header-mid) 100%);
+  color:#fff;
+  padding:calc(14px + env(safe-area-inset-top)) 16px 14px;
+  text-align:center;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+main{flex:1;overflow-y:auto;padding:16px;background:transparent}
 .page{display:none}.page.active{display:block}
 #profile{text-align:center}
-#photo{width:120px;height:120px;border-radius:50%;object-fit:cover;margin:8px auto;display:block;border:3px solid #1565c0}
+#photo{width:120px;height:120px;border-radius:50%;object-fit:cover;margin:8px auto;display:block;border:3px solid var(--primary);box-shadow:0 0 0 4px rgba(29,79,130,0.10)}
 .photo-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:8px}
-.sub{color:#1565c0;margin-bottom:10px}
-h3{margin:14px 0 8px;color:#1565c0}
-p{margin:8px 0;line-height:1.5}
-.card{background:#fff;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,.12)}
-.bar{background:#dde3e8;border-radius:6px;height:10px;margin:4px 0 12px}
-.bar div{background:#1565c0;height:100%;border-radius:6px}
-button{background:#1565c0;color:#fff;border:0;border-radius:8px;padding:10px 16px;font-size:15px;margin:6px 0}
-input,textarea{width:100%;padding:10px;margin:6px 0;border:1px solid #bbb;border-radius:8px;font-size:15px}
+.sub{color:var(--text-muted);margin-bottom:10px}
+h3{margin:14px 0 8px;color:var(--primary);}
+p{margin:8px 0;line-height:1.5;color:var(--text-main)}
+a{color:var(--primary-strong);font-weight:600}
+.card{
+  background:var(--card);
+  color:var(--text-main);
+  border:1px solid var(--card-border);
+  border-radius:12px;
+  padding:14px;
+  margin-bottom:10px;
+  box-shadow:0 2px 8px var(--shadow);
+}
+button{
+  background:linear-gradient(135deg, var(--primary-strong) 0%, var(--primary) 100%);
+  color:#fff;
+  border:0;
+  border-radius:8px;
+  padding:10px 16px;
+  font-size:15px;
+  margin:6px 0;
+  box-shadow:0 4px 12px rgba(29,79,130,0.18);
+}
+input,textarea{
+  width:100%;
+  padding:10px;
+  margin:6px 0;
+  border:1px solid var(--input-border);
+  border-radius:8px;
+  font-size:15px;
+  background:var(--input-bg);
+  color:var(--text-main);
+}
+input::placeholder,textarea::placeholder{color:#768aa1}
 textarea{height:90px}
-nav{display:flex;background:#fff;border-top:1px solid #ddd;padding-bottom:env(safe-area-inset-bottom)}
-nav button{flex:1;background:none;color:#666;border-radius:0;margin:0;padding:8px 0;font-size:20px;display:flex;flex-direction:column;align-items:center}
+nav{
+  display:flex;
+  background:var(--nav-bg);
+  border-top:1px solid var(--card-border);
+  padding-bottom:env(safe-area-inset-bottom);
+}
+nav button{
+  flex:1;
+  background:none;
+  color:var(--text-muted);
+  border-radius:0;
+  margin:0;
+  padding:8px 0 10px;
+  font-size:20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  box-shadow:none;
+}
 nav button span{font-size:11px}
-nav button.active{color:#1565c0;font-weight:bold}
-#app-status{min-height:1.5em;color:#455a64;font-size:13px}
-button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #ffb300;outline-offset:2px}
+nav button.active{
+  background:var(--primary-soft);
+  color:var(--primary-strong);
+  font-weight:bold;
+}
+#app-status{display:none;min-height:1.5em;color:var(--text-muted);font-size:13px}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #d4a74b;outline-offset:2px}
