@@ -1,0 +1,30 @@
+{
+  "cordova-plugin-camera": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-camera@8.0.0"
+    },
+    "is_top_level": true,
+    "variables": {
+      "ANDROIDX_CORE_VERSION": "1.6.+"
+    }
+  },
+  "cordova-plugin-geolocation": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-geolocation@5.0.0"
+    },
+    "is_top_level": true,
+    "variables": {
+      "ANDROIDX_CORE_VERSION": "1.6.+"
+    }
+  },
+  "cordova-plugin-device": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-device@3.0.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}

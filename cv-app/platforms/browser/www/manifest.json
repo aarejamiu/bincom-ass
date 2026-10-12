@@ -1,0 +1,12 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "My CV",
+  "short_name": "My CV",
+  "version": "com.example.cvapp",
+  "description": "Multi-page CV mobile app",
+  "author": "Your Name",
+  "icons": [],
+  "orientation": "portrait",
+  "start_url": "index.html"
+}

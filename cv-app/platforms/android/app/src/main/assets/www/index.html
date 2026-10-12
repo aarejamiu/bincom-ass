@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.tile.openstreetmap.org; connect-src *; media-src *">
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+  <link rel="stylesheet" href="css/style.css">
+  <title>My CV</title>
+</head>
+<body>
+  <header><h1 id="page-title">Profile</h1></header>
+
+  <main>
+    <!-- PAGE 1: PROFILE + CAMERA -->
+    <section class="page active" id="profile" aria-hidden="false">
+      <img id="photo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><rect width='120' height='120' fill='%23cfd8dc'/><text x='60' y='72' font-size='48' text-anchor='middle' fill='%2337474f'>?</text></svg>" alt="Profile photo">
+      <div class="photo-actions">
+        <button id="btn-camera" type="button">📷 Take Profile Photo</button>
+        <button id="btn-gallery" type="button">🖼️ Choose from Gallery</button>
+      </div>
+      <h2>Aare Jamiu</h2>
+      <p class="sub">Mathematics Graduate · Developer</p>
+      <p>Motivated student with interests in software development, research and academic writing. Replace this text with your own summary.</p>
+      <p><a href="mailto:aarejamiu1@example.com">aarejamiu1@example.com</a> · <a href="tel:+2340000000000">+234 0907 859 9222</a></p>
+    </section>
+
+    <!-- PAGE 2: EDUCATION -->
+    <section class="page" id="education" aria-hidden="true">
+      <div class="card"><h3>B.Sc. Mathematics</h3><p>Lagos State University · May, 2023 – August 2026</p></div>
+      <div class="card"><h3>Secondary School Certificate</h3><p>Ijebu Muslim College · 2015 – 2021</p></div>
+      <div class="card"><h3>Software Engineering (backend)</h3><p>SQI College of ICT · October 2025 – July 2026</p></div>
+    </section>
+
+    <!-- PAGE 3: SKILLS + EXPERIENCE -->
+    <section class="page" id="skills" aria-hidden="true">
+      <h3>Skills</h3>
+      <div id="skill-list"></div>
+      <h3>Projects</h3>
+      <div id="project-list"></div>
+    </section>
+
+    <!-- PAGE 4: CONTACT + GEOLOCATION -->
+    <section class="page" id="contact" aria-hidden="true">
+      <h3>Where I Am</h3>
+      <button id="btn-geo">📍 Get My Location</button>
+      <p id="geo-out">Location not fetched yet.</p>
+      <a id="map-link" href="#" style="display:none">Open in Maps</a>
+      <h3>Device Info</h3>
+      <p id="device-out">Waiting for device…</p>
+      <h3>Message Me</h3>
+      <input id="msg-name" placeholder="Your name">
+      <textarea id="msg-body" placeholder="Message"></textarea>
+      <button id="btn-send">Send via Email</button>
+      <h3>Share This CV</h3>
+      <button id="btn-share">Share CV</button>
+    </section>
+
+    <div class="page-controls" aria-label="CV page navigation">
+      <button id="btn-previous" type="button" aria-label="Previous page">‹ Previous</button>
+      <button id="btn-next" type="button" aria-label="Next page">Next ›</button>
+    </div>
+    <p id="app-status" role="status" aria-live="polite"></p>
+  </main>
+
+  <nav aria-label="CV sections">
+    <button type="button" data-page="profile" class="active" aria-current="page">👤<span>Profile</span></button>
+    <button type="button" data-page="education">🎓<span>Education</span></button>
+    <button type="button" data-page="skills">🛠<span>Skills</span></button>
+    <button type="button" data-page="contact">✉️<span>Contact</span></button>
+  </nav>
+
+  <script src="cordova.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

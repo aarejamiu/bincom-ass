@@ -1,0 +1,27 @@
+{
+  "devDependencies": {
+    "cordova-android": "^15.1.0",
+    "cordova-browser": "^7.0.0",
+    "cordova-plugin-camera": "^8.0.0",
+    "cordova-plugin-geolocation": "^5.0.0"
+  },
+  "cordova": {
+    "platforms": [
+      "android",
+      "browser"
+    ],
+    "plugins": {
+      "cordova-plugin-camera": {
+        "ANDROIDX_CORE_VERSION": "1.6.+"
+      },
+      "cordova-plugin-geolocation": {
+        "ANDROIDX_CORE_VERSION": "1.6.+",
+        "GPS_REQUIRED": "true"
+      },
+      "cordova-plugin-device": {}
+    }
+  },
+  "dependencies": {
+    "cordova-plugin-device": "3.0.0"
+  }
+}
